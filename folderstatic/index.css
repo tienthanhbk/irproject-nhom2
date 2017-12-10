@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "google";
+    src: url('./public/font/NotoSans-Regular.ttf');
+}
+
+@keyframes move {
+    from {
+        top: 5px;
+    }
+    to {
+        top: -25px;
+        font-size: 1.5em;
+    }
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        top: 100px;
+    }
+    to {
+        opacity: 1;
+        top: 0px;
+    }
+}
+
+body {
+    margin: 0px;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 15vh; 
+}
+
+.title {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    text-align: center;
+    font-size: 3em;
+    font-family: "google";
+    color: rgb(35, 115, 180);
+}
+
+.search-box {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    font-family: "google";
+}
+
+.box {
+    position: relative;
+    margin-top: 15%;
+    height: 40px;
+    width: 100%;
+}
+
+#search-bar {
+    height: 100%;
+    width: 100%;
+    border: 2px solid rgb(35, 115, 180);
+    border-radius: 10px;
+    outline: none;
+    font-size: 2em;
+}
+
+#label {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    color: rgb(35, 115, 180);
+    font-size: 2em;
+}
+
+.result {
+    margin: 50px 20vw;
+    position: relative;
+}
+
+.item {
+    width: 100%;
+    font-size: 1.5em;
+    border: 1px solid rgb(35, 115, 180);
+    border-radius: 5px;
+    margin-bottom: 15px; 
+    position: relative;
+    animation: show 1s forwards;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(35, 115, 180);
+}
+
+
+
