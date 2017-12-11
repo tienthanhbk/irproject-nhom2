@@ -48,8 +48,8 @@ public class IndexFiles {
 
     /** Index all text files under a directory. */
     public static void main(String[] args) {
-        String indexPath = "indexed";
-        String docsPath = "dataset";
+        String indexPath = "indexed";//Thư mục lưu file indexed
+        String docsPath = "dataset";//Thư mục chứa tập dataset
         boolean create = true;
 
         final Path docDir = Paths.get(docsPath);
@@ -133,7 +133,6 @@ public class IndexFiles {
 
             collectionArr.forEach((item) -> {
                 JSONObject itemJSON = (JSONObject) item;
-                System.out.println(itemJSON.get("query"));
                 JSONArray sites = (JSONArray) itemJSON.get("sites");
                 String queryBase = (String) itemJSON.get("query");
                 try {
@@ -174,7 +173,7 @@ public class IndexFiles {
         doc.add(new TextField("content", content, Field.Store.YES));
 
         doc.add(new TextField("query-base", queryBase, Field.Store.YES));
-        doc.add(new TextField("relevance", relevance, Field.Store.YES));
+        doc.add(new StringField("relevance", relevance, Field.Store.YES));
 
         writer.addDocument(doc);
     }
