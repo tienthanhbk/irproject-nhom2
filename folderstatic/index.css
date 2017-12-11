@@ -103,5 +103,19 @@ a {
     color: rgb(35, 115, 180);
 }
 
+.pagination {
+    display: block;
+    margin: auto;
+    width: 350px;
+}
+
+.pagination a {
+    color: rgb(35, 115, 180);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 400;
+}
 
 
