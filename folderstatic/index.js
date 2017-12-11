@@ -33,7 +33,8 @@ searchBar.addEventListener("keydown", function(e) {
                             <p>${hit.content}</p>
                         </div>`;
                 showResult.innerHTML += str;
-                showResult.innerHTML += `<div class="pagination">
+            })
+            showResult.innerHTML = `<div class="pagination">
                                             <a href="#">&laquo;</a>
                                             <a href="#">1</a>
                                             <a href="#">2</a>
@@ -43,8 +44,7 @@ searchBar.addEventListener("keydown", function(e) {
                                             <a href="#">6</a>
                                             <a href="#">&raquo;</a>
                                         </div>`;
-            })
-
+            console.log(showResult.innerHTML);
         })
         .catch( err => alert(err))
     }
